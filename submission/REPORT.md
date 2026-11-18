@@ -38,12 +38,19 @@ Hai điểm mù được thể hiện trong calibration:
 
 ## 5. Train: raw vs clean
 
-Chưa có kết quả train được lưu trong workspace: `submission/results/` chỉ có `.gitkeep`, chưa có `comparison.md`. Vì vậy chưa có số mAP50 hoặc độ lệch chuẩn giữa seed để so sánh Raw và Clean.
+Đã train CPU rút gọn bằng `yolo26n.pt`, 15 epoch, ảnh 416px, batch 16; hai biến thể dùng cùng seed 0 và 1, cùng val `gold_val` và test. Raw dùng 224 ảnh train; Clean dùng 193 ảnh theo export pipeline. Đây là cấu hình rút gọn theo hướng dẫn, không phải cấu hình chuẩn Colab 20 epoch/640px.
+
+| Biến thể | Ảnh train | mAP50 (TB ± SD) | mAP50-95 (TB ± SD) | Precision (TB ± SD) | Recall (TB ± SD) |
+|---|---:|---:|---:|---:|---:|
+| Raw | 224 | 0.621 ± 0.006 | 0.419 ± 0.018 | 0.639 ± 0.002 | 0.577 ± 0.013 |
+| Clean | 193 | 0.638 ± 0.049 | 0.414 ± 0.034 | 0.734 ± 0.043 | 0.515 ± 0.001 |
+
+Clean cao hơn Raw **0.017 mAP50**, nhưng mức chênh này nhỏ hơn độ lệch giữa seed của Clean (SD 0.049); với chỉ hai seed, chưa thể kết luận pipeline làm tăng mAP một cách ổn định. mAP50-95 của Clean thấp hơn 0.005; precision tăng 0.095 trong khi recall giảm 0.062. Kết quả và cấu hình từng seed được lưu trong `submission/results/`, bảng tổng hợp trong `comparison.md`.
 
 ## 6. Quyết định và ghi chú AI
 
 **Quyết định:** theo kết quả chạy hiện tại, phát hành `clean_v1` là **Release**; 13/193 ảnh còn cảnh báo nằm dưới ngưỡng Hold. Các cảnh báo ngữ nghĩa vẫn cần được xác nhận khi sử dụng dữ liệu.
 
 - **Dùng AI:** có; prompt chính là hoàn thiện 4 module Python của pipeline theo quy tắc và test có sẵn.
-- **Kiểm tra:** chạy test mục tiêu và toàn bộ pytest; đồng thời đối chiếu báo cáo pipeline, manifest export và thử gate với ngân sách 0.
+- **Kiểm tra:** toàn bộ pytest **79/79 PASS** (`python scripts/check_submission.py`); checker đầy đủ xác nhận 0 lỗi, 0 cảnh báo; đồng thời đối chiếu báo cáo pipeline, manifest export và thử gate với ngân sách 0.
 - **Lần AI sai:** autofix ban đầu ghi newline khi xóa dòng lỗi duy nhất, làm phát sinh `BAD_FORMAT` giả; đã sửa và xác nhận lại bằng kiểm thử gate.
