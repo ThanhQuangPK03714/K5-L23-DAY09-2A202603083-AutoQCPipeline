@@ -1,0 +1,28 @@
+check,severity,code,image,line,message,extra
+missing_labels,warn,EMPTY_LABEL,img_0097,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0129,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0147,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0184,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+missing_labels,warn,EMPTY_LABEL,img_0192,,file nhãn rỗng: ảnh nền hay thiếu nhãn?,
+label_format,warn,BOX_HUGE,img_0018,1,dòng 1: box chiếm 0.970485 diện tích chuẩn hóa,
+label_format,warn,BOX_TINY,img_0026,6,dòng 6: cạnh ngắn của box nhỏ hơn 12 px,
+label_format,warn,BOX_TINY,img_0051,5,dòng 5: cạnh ngắn của box nhỏ hơn 12 px,
+label_format,warn,BOX_HUGE,img_0128,1,dòng 1: box chiếm 0.988382 diện tích chuẩn hóa,
+label_format,warn,BOX_TINY,img_0161,2,dòng 2: cạnh ngắn của box nhỏ hơn 12 px,
+label_format,warn,BOX_TINY,img_0161,3,dòng 3: cạnh ngắn của box nhỏ hơn 12 px,
+label_format,warn,BOX_TINY,img_0161,4,dòng 4: cạnh ngắn của box nhỏ hơn 12 px,
+label_format,warn,BOX_TINY,img_0183,11,dòng 11: cạnh ngắn của box nhỏ hơn 12 px,
+label_format,warn,BOX_HUGE,img_0196,1,dòng 1: box chiếm 0.984226 diện tích chuẩn hóa,
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0014,2,box nhãn không khớp dự đoán của model,"{""iou"": 0.1450117456567434}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0022,2,box nhãn không khớp dự đoán của model,"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0068,8,box nhãn không khớp dự đoán của model,"{""iou"": 0.19889536171485311}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0075,6,box nhãn không khớp dự đoán của model,"{""iou"": 0.10672083058763539}"
+second_opinion,warn,POSSIBLE_WRONG_CLASS,img_0078,,model và nhãn có thể bất đồng về lớp,"{""conf"": 0.8287, ""iou"": 0.9189310218686991}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0091,10,box nhãn không khớp dự đoán của model,"{""iou"": 0.12359206869958318}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0124,8,box nhãn không khớp dự đoán của model,"{""iou"": 0.03620175556397309}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0131,11,box nhãn không khớp dự đoán của model,"{""iou"": 0.0}"
+second_opinion,warn,POSSIBLE_MISSING,img_0183,,model phát hiện vật chưa có box nhãn khớp,"{""conf"": 0.8104}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0189,4,box nhãn không khớp dự đoán của model,"{""iou"": 0.00916243131024922}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0191,1,box nhãn không khớp dự đoán của model,"{""iou"": 0.25644187130435536}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0206,1,box nhãn không khớp dự đoán của model,"{""iou"": 0.10827808564215993}"
+second_opinion,warn,POSSIBLE_FALSE_POS,img_0212,4,box nhãn không khớp dự đoán của model,"{""iou"": 0.15014265209152355}"

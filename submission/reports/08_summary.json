@@ -1,0 +1,18 @@
+{
+  "verdict": {
+    "decision": "Release",
+    "n_errors": 0,
+    "n_warn_images": 13,
+    "n_images": 193,
+    "warn_ratio": 0.0674,
+    "reasons": [
+      "Không còn lỗi bắt buộc; 13/193 ảnh còn cảnh báo (tỷ lệ 0.0674), dưới ngưỡng giữ 0.1000."
+    ]
+  },
+  "reviewed": 80,
+  "budget": 80,
+  "seconds": 10.7,
+  "exported": "D:\\day9\\K5-L23-DAY09-2A202603083-AutoQCPipeline\\submission\\export\\clean_v1",
+  "config_sha1": "c08543c40530663fda8784818698b874ce00e522",
+  "review_sim_sha1": "7988ca22827f780a7043a2300490e679a1697154"
+}
